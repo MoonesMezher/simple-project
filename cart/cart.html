@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <title>عربة التسوق</title>
+  <link rel="stylesheet" href="/CSS/main.css">
+</head>
+
+<body>
+  <div class="cart-container">
+    <h1>عربة التسوق</h1>
+    <ul id="cart-items">
+      <li>
+        <div class="item-details">
+          <h3>منتج 1</h3>
+          <p>الكمية: 2</p>
+          <p>السعر: 10.000 ل.س</p>
+        </div>
+        <button onclick="removeItem(1)">إزالة</button>
+      </li>
+      <li>
+        <div class="item-details">
+          <h3>منتج 2</h3>
+          <p>الكمية: 1</p>
+          <p>السعر: 15.000 ل.س</p>
+        </div>
+        <button onclick="removeItem(2)">إزالة</button>
+      </li>
+    </ul>
+    <div class="total-price">
+      <p>إجمالي السعر: <span id="total-price">25.000 ل.س</span></p>
+    </div>
+    <div class="checkout">
+      <a href="/cart/checkout.html" class="checkout-button">إتمام الشراء</a>
+    </div>
+  </div>
+  <script src="/cart/cart.js"></script>
+</body>
+
+</html>
