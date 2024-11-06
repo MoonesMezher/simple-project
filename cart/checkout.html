@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="ar">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>إتمام الشراء</title>
-    <link rel="stylesheet" href="/CSS/main.css">
-</head>
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
 
-<body>
+  <body>
     <div class="checkout-container">
-        <h1>إتمام الشراء</h1>
-        <div class="order-summary">
-            <h2>ملخص الطلب</h2>
-            <p>إجمالي السعر: <span id="total-price">25.000 ل.س</span></p>
+      <h1>إتمام الشراء</h1>
+      <div class="order-summary">
+        <h2>ملخص الطلب</h2>
+        <p>إجمالي السعر: <span id="total-price">25.000 ل.س</span></p>
+      </div>
+      <form action="/process-order.asp" method="post">
+        <div class="shopping-info">
+          <h2>معلومات الشحن</h2>
+          <label for="name">الاسم الكامل:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="address">العنوان:</label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="city">المدينة:</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="phone">رقم الهاتف:</label>
+          <input type="tel" id="phone" name="phone" required />
         </div>
-        <form action="/process-order.asp" method="post">
-            <div class="shopping-info">
-                <h2>معلومات الشحن</h2>
-                <label for="name">الاسم الكامل:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="address">العنوان:</label>
-                <input type="text" id="address" name="address" required>
-
-                <label for="city">المدينة:</label>
-                <input type="text" id="city" name="city" required>
-
-                <label for="phone">رقم الهاتف:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="submit-order">
-                <button type="submit">إتمام الشراء</button>
-            </div>
-        </form>
+        <div class="submit-order">
+          <button type="submit">إتمام الشراء</button>
+        </div>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
